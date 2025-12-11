@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "build": {
+    "env": {
+      "APP_ENV": "production",
+      "APP_DEBUG": "false"
+    }
+  },
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.0"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "api/index.php" }
+  ]
+}
