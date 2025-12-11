@@ -65,3 +65,8 @@ Route::controller(LetterController::class)->group(function () {
     Route::put('/letters/{id}', 'update')->name('letters.update');
     Route::delete('/letters/{id}', 'destroy')->name('letters.destroy');
 });
+
+Route::get('/link-storage', function () {
+    Artisan::call('storage:link');
+    return "storage linked";
+});
